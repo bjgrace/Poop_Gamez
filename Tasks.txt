@@ -1,0 +1,5 @@
+Jon Tasks
+
+Benji Tasks
+- Figure out how to implement animation in the game
+- Figure out how to implement hitboxes in the game

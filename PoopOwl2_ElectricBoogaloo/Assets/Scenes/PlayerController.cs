@@ -16,7 +16,15 @@ public class PlayerController : MonoBehaviour
     private bool isAirborne;
     private bool isTargeting;
     private int orientation;
-    
+    // private SpriteRenderer playerRender;
+
+    /*
+    private void Awake()
+    {
+    Need to get the player's current orientation
+        playerRender = GetComponent<SpriteRenderer>();
+    }
+    */
     void Start()
     {
         baseJumps = PlayerStats.JUMP_NUM;
@@ -81,6 +89,15 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+
+        // Check if sprite needs to be flipped
+        /*
+        bool flipSprite = (playerRender.flipX ? (horAxis > 0.01f) : (horAxis < 0.01f));
+        if (flipSprite)
+        {
+            playerRender.flipX = !playerRender.flipX;
+        }
+        */
     }
 
     public void StartAction(Vector2 startVector, Vector2 endVector, int startupFrames, int iFrames, int endFrames)
